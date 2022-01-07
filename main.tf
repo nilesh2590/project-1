@@ -109,8 +109,8 @@ resource "aws_instance" "role-test" {
   subnet_id              = aws_subnet.subnet-1.id
   vpc_security_group_ids = ["${aws_security_group.test-subnet-1.id}"]
   #aws_iam_role = "{aws_iam_role.s3-role.name}"
-  key_name = "my_key"
   tags     = local.common_tags
+/*  key_name = "my_key"
 
   connection {
     type        = "ssh"
@@ -119,6 +119,7 @@ resource "aws_instance" "role-test" {
     host        = aws_instance.role-test.public_ip
     agent       = false
   }
+  */
 }
   output "public-ip-addr" {
     value = aws_instance.role-test.public_ip
