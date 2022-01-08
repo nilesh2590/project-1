@@ -10,9 +10,6 @@ terraform {
 
 provider "aws" {
   region     = var.region
-  access_key = "AKIAZVTAABCB654GV6ME"
-  secret_key = "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"
-
 }
 locals {
   common_tags = {
